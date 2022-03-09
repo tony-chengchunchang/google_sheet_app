@@ -8,15 +8,13 @@ import pandas as pd
 import traceback
 import datetime
 
-SPREADSHEET_ID = '1SxbT2Gubgd9GkOK4jGcUja7QjognFcjELUfy6o4TOvE'
-RANGE_NAME = 'fb_err_log!A2:I'
-
+RANGE_NAME = 'RANGE_OF_A1_Notation'
 
 class GsheetHandler:
     # If modifying these scopes, delete the file token.pickle.
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
     
-    def __init__(self, spreadsheet_id=SPREADSHEET_ID):
+    def __init__(self, spreadsheet_id):
         self.service = self.setup()
         self.spreadsheet_id = spreadsheet_id
         
